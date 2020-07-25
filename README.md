@@ -1,5 +1,5 @@
 # Fatal Police Shootings Analysis Project #
-**Team members:** Brynn Hamilton, Alissa Vokes, and Saranhais Zerpa
+**Team members:** [Brynn Hamilton](https://github.com/Brynn-Hamilton),[ Alissa Vokes](https://github.com/alissavokes), and [Saranhais Zerpa](https://github.com/szerpa17)
 
 ## Project Description/Outline ##
 The goal of our project is to examine fatal police shootings throughout the U.S. from 2015 to June 2020. We'll examine relationships between shootings, time, location (both City and State level), population size, and victim demographics (age, race, and gender).
@@ -19,9 +19,9 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 
 
 ## Datasets to Be Used ##
-* [Washington Post Police Shooting Data][https://github.com/washingtonpost/data-police-shootings]
+* [Washington Post Police Shooting Data](https://github.com/washingtonpost/data-police-shootings)
     * Time period our project focused on is from 2015 to the end of June 2020.
-* [Census Population Data by State and Place - Table DP05 ACS 1-Year][https://data.census.gov/cedsci/table?q=population&g=0100000US.04000.001,.160000&hidePreview=false&tid=ACSDP1Y2018.DP05&tp=true&vintage=2018]
+* [Census Population Data by State and Place - Table DP05 ACS 1-Year](https://data.census.gov/cedsci/table?q=population&g=0100000US.04000.001,.160000&hidePreview=false&tid=ACSDP1Y2018.DP05&tp=true&vintage=2018)
     * To identify average city populations between 2015 and 2018
 
 ## The Exploration and Cleaning Process ##
