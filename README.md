@@ -2,34 +2,21 @@
 **Team members:** Brynn Hamilton, Alissa Vokes, and Saranhais Zerpa
 
 ## Project Description/Outline ##
-Our project is to examine fatal police shootings throughout the U.S.A. from 2015 to June 2020. We'll examine relationships between shootings, time, location (City, State), population size, and victim age, race, and gender.
+The goal of our project is to examine fatal police shootings throughout the U.S. from 2015 to June 2020. We'll examine relationships between shootings, time, location (both City and State level), population size, and victim demographics (age, race, and gender).
 
 ### Hypothesis ###
-trends in shootings over the years; and relationships between gender, race, age.
+**Null Hypothesis:** There is no correlation between population size and fatal police shootings.
+**Alternative Hypothesis:** Cities/States with higher populations have more police shootings (for every 100,000)
 
-### Research Questions to Answer ###
-Are there more instances of fatal shootings in certain areas (metropolitan vs rural)?
-Are there more instances of males being fatally shot than other genders?
-Is there a higher rate of fatal shootings for certain races/ethnicities?
-Is there a link between police shootings and city population sizes?
-Hypothesis
-State Population and Shootings (for every 100,000 people)
-Null: There is no correlation between population size in a city or state and lethal police shootings.
-Alternative:  Cities/States with higher populations have more police shootings (for every 100,000 in the state or ever 10,000 in the city). 
-Age
-Null: 18+
-Alternative: 20-25 years olds make up a majority of the shooting data
-Shootings over time
-Null: Shootings have not increased over our timeframe
-Alternative: Shootings have increased
-??? Metropolitan Areas and Shootings (for every 10,000 people)
-Null: Metropolitan areas (areas with more than 50,000 people) do not have higher rates of police shootings.
-Alternative: Metropolitan areas have higher rates of police shootings for every 10,000 people.
-Victims (among police shootings)
-Null: There is no common victim demographic????
-Alternative: The most common victim demographic is predicted to be black males, within the range of 20-25 years old.
-States
-It is hypothesized that Florida will be among the top five states with the most fatal shooting deaths.
+
+### Additional Research Questions ###
+1. Accounting for gender, race, and age, which demographic has had the most victims due to fatal police shootings?
+2. Will Florida (State) be one of the top 5 States with the most recorded fatal police shootings? 
+3. Which City has the most recorded fatal police shootings? 
+4. Which State has the most recorded fatal police shootings?
+5. Have police shootings increased in the past five years?
+6. Is there a particular time of the year during which police shootings occur more frequently?
+
 
 ## Datasets to Be Used ##
 * [Washington Post Police Shooting Data][https://github.com/washingtonpost/data-police-shootings]
@@ -37,15 +24,16 @@ It is hypothesized that Florida will be among the top five states with the most 
 * [Census Population Data by State and Place - Table DP05 ACS 1-Year][https://data.census.gov/cedsci/table?q=population&g=0100000US.04000.001,.160000&hidePreview=false&tid=ACSDP1Y2018.DP05&tp=true&vintage=2018]
     * To identify average city populations between 2015 and 2018
 
-## Cleaning Process ##
+## The Exploration and Cleaning Process ##
+
 ### Insights ###
 
 ### Challenges###
 
 
-## Analysis ##
+## The Data Analysis Process ##
 
-## Results ##
+## Findings ##
 
 Potential issue: City names in the Washington Post Data may not always consistently match the Census data given, this may be challenging to work with.
 Rough Breakdown of Tasks
