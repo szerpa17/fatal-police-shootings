@@ -71,14 +71,16 @@ plt.savefig('images/Shootings per Year.png')
 plt.show()
 
 
-monthly_shootings_df = pd.DataFrame(yearly_shootings.groupby('month')['id'].count())
-monthly_shootings_df
+# Remove 2020 information to focus on complete years available
+monthly_shootings = yearly_shootings.loc[yearly_shootings['year'] get_ipython().getoutput("= '2020']")
+# Grouped by month
+monthly_shootings_df = pd.DataFrame(monthly_shootings.groupby('month')['id'].count())
 monthly_shootings_df = monthly_shootings_df.reset_index()
 monthly_shootings_df
 
 
 # Plot
-plt.plot(monthly_shootings_df['month'], monthly_shootings_df['id'])
+plt.plot(monthly_shootings_df['id'])
 plt.title('Fatal Police Shootings by Month \n(4 Year Period)')
 plt.xlabel('Month')
 plt.ylabel('Count of Shootings')
@@ -305,13 +307,12 @@ line_eq = "y = " + str(round(slope,2)) + "x + " + str(round(intercept,2))
 plt.figure(figsize=(10,5))
 plt.scatter(x_values,y_values)
 plt.plot(x_values,regress_values,"r-")
-annotation = plt.annotate(line_eq,(2,10000000),fontsize=15,color="red")
+annotation = plt.annotate(line_eq,(2,2000000),fontsize=15,color="red")
 plt.xlabel('Shootings Per 100,000')
 plt.ylabel('Average City Population')
 plt.title('Regressiong Analysis of Fatal Shootings per 100,000 in a Four Year Period vs City Population \n(2017-2018)')
-plt.tight_layout()
 print(f"The r-squared is: {rvalue**2}")
-
+plt.tight_layout()
 # Export
 plt.savefig('images/High Level Regression_City Population Vs. Per Capita Shooting Fatalities.png')
 plt.show()
@@ -415,6 +416,3 @@ plt.tight_layout()
 # Export
 plt.savefig('images/City Population Vs. Per Capita Shooting Fatalities 2.png')
 plt.show()
-
-
-

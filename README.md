@@ -1,17 +1,20 @@
 # Fatal Police Shootings Analysis #
 **Team members:** [Brynn Hamilton](https://github.com/Brynn-Hamilton),[ Alissa Vokes](https://github.com/alissavokes), and [Saranhais Zerpa](https://github.com/szerpa17)
 
-## Project Description/Outline ##
+## Project Description ##
 The goal of our project is to examine fatal police shootings throughout the U.S. from January 2015 to June 2020. We will examine relationships between shootings, time, location (both city and state level), population size, and victim demographics (age, race, and gender).
+
+Our interest in this topic is due to the social movement taking place, Black Lives Matter, for which we want to explore existing data.
 
 ### Hypothesis ###
 **Null Hypothesis:** There is no correlation between population size and fatal police shootings.
+
 **Alternative Hypothesis:** Cities/States with higher populations have more police shootings (for every 100,000 people).
 
 
 ### Additional Research Questions ###
 1. Accounting for gender, race, and age, which demographic has had the most victims due to fatal police shootings?
-2. Will Florida (State) be one of the top 5 States with the most recorded fatal police shootings? 
+2. Will Florida (State) be one of the top 5 states with the most recorded fatal police shootings? 
 3. Which City has the most recorded fatal police shootings? 
 4. Which State has the most recorded fatal police shootings?
 5. Have police shootings increased in the past five years?
@@ -20,26 +23,25 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 
 ## Datasets ##
 * [Washington Post Police Shooting Data](https://github.com/washingtonpost/data-police-shootings)
-    * The time period focus of our project is from January 2015 to the end of June 2020.
 * [Census Population Data by State and Place - Table DP05 ACS 1-Year](https://data.census.gov/cedsci/table?q=population&g=0100000US.04000.001,.160000&hidePreview=false&tid=ACSDP1Y2018.DP05&tp=true&vintage=2018)
     * Four CSVs were obtained from the Census site.
-    * The files were used used to identify yearly city and state populations between 2015 and 2018.
-    * Due to the lack of availability of 2019 nd 2020, population averages were calculated over the selected timeframe.
-    * The 1-year estimates were used for the purpose of [currency](https://www.census.gov/programs-surveys/acs/guidance/estimates.html), though this left out populations under 65,000.
+    * The files were used to identify yearly city and state populations between 2015 and 2018.
+    * Due to the lack of availability of 2019 and 2020 population data, population averages were calculated over the selected timeframe.
+    * The 1-year estimates were used for data [currency](https://www.census.gov/programs-surveys/acs/guidance/estimates.html), though this left out populations under 65,000.
 
 ## The Cleaning Process ##
 * **Learning the Language of our Data**
     * Each Census file had over 300 columns and 600 rows of information
-    * Time was dedicated to studying how information was presented by the Census in order to accurately transform it into insights.
+    * Time was dedicated to studying how information was presented by the Census to accurately transform it into insights.
 * **Addressing NaN values**
-    * The shootings data frame had multiple columns with Nan Values.
+    * The shooting's data frame had multiple columns with NaN Values.
     * As our goal was to preserve the ID column to ensure an accurate count, we refrained from dropping NaN values and instead replaced them with the word 'Unknown'.
 * **Filtering of Data**
     * Extracted shooting data that was dated after 06/30/2020.
 * **Readability**
     * The gender and race columns variables were renamed for readability.  
 * **The handling and standardization of multiple files prior to merging**
-    * Census Data files had additional terminology associated with city names, which had to be removed with Regex in order to facilitate a future merge with the shootings data frame.
+    * Census Data files had additional terminology associated with city names, which had to be removed with Regex to facilitate a future merge with the shootings data frame.
     * Trailing spaces were removed.
     * All Census files were merged into one data frame.
     * Population averages over our chosen four year period were calculated.
@@ -47,15 +49,15 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 
 ### Insights ###
 
-* The usefullness of creating multiple data frames to address the shrinkage of Data.
-    * Cleaned and merged Census data frame - usefull for a high level view of state population.
-    * Cleaned shootings data frame - usefull for shooting specific analysis.
-    * Merged shootings/Census data frame - useful for the calculation of shooting data per 100,000 people.
+* The usefulness of creating multiple data frames to address the shrinkage of Data.
+    * Cleaned and merged Census data frame, used for a high-level view of state populations.
+    * Cleaned shooting's data frame, used for shooting specific analysis.
+    * Merged shooting's/Census data frame, used for the calculation of shooting data per 100,000 people.
 
 ### Challenges ###
-* Census Place terminology
+* Census 'Place' terminology
     * A resource for all 'place' designations was identified within the analysis stage of the project.
-    * Therefore, it is possible that cities may have been dropped due to not being matched with the appropriate Census equivalent in the Regex step of the data cleaning. 
+    * Therefore, cities may have been dropped due to not being matched with the appropriate Census equivalent in the Regex step of the data cleaning. 
     * Resource [link](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf)
 * **File Inconsistencies**
     * Census Data files were not consistent in their use of column ID's and column description formats in all files
@@ -65,28 +67,32 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 ## Data Exploration ##
 * State and city population information was visualized
     * State
-        * Population by State Boxplot
+        * Population by State Boxplot (Zoomed, not including all outliers)
+            
             ![State Population Box Plot- Individual States](https://github.com/szerpa17/fatal-police-shootings/blob/szerpa17_2/images/State%20Box%20Plot%20Exploration.png?raw=true)
         * Combined State Average Boxplot
+            
             ![Average State Population Single Box Plot - Combined States](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined%20Average%20State%20Population%20Exploration.png?raw=true)
     * City
         * Combined City Boxplot
-            [Average City Population Single Box Plot - Combined Cities](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined%20Average%20City%20Population%20Exploration.png?raw=true)
+            
+            ![Average City Population Single Box Plot - Combined Cities](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined%20Average%20City%20Population%20Exploration.png?raw=true)
         
 ### Insights ###
 * Census Data
     * This dataset may be limiting in the findings it can provide as it excludes populations under 65,000, which may demonstrate different trends.
     * Outliers
-        * Visual exploration on state and city data identified the presence of outliers. 
-        * Our hypothesis is focused on population size, therefore, it was determined that outliers would be maintained for our analysis in order to gain additional insights on these populations.
+        * Visual exploration of state and city data identified the presence of outliers. 
+        * Our hypothesis is focused on population size, therefore, it was determined that outliers would be maintained for our analysis to gain additional insights into these populations.
 
 ### Challenges ###
 * Accounting for "Unknown" values in numeric columns.
     * Though inputting these values in place of NaNs in the cleaning stage, these values made data analysis more complex when dealing with numeric columns. 
 * Scope Creep
-    * Due to not removing data columns that werent a part of our scope, it was difficult to avoid from scope creep.
+    * Due to not removing data columns that were not a part of our scope, it was difficult to avoid scope creep.
     * The mass size of our data also contributed to scope creep as we did not pull samples from our data for analysis.
-* Backtracking to validate the results of plotted charts. 
+* Identifying the opportunity for additional data frames to be made as a foundation for data analysis in the exploration phase (such as a Census data frame that pulls city shooting data for state per capita calculations).
+* The process of backtracking to validate the results of plotted charts. 
 * Application of complicated visualizations.
 * Time - which limited analysis and visual details on charts. 
 
@@ -96,10 +102,12 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 ## Findings ##
 **Hypothesis results**
 
+A note on R-squared values - data based on human behavior can often have a low r-squared as it is difficult to predict and show statistical significance. ([Source](https://statisticsbyjim.com/glossary/regression-analysis/))
+
 **State:** 
 * No visible correlation
 * Low R-squared: 0.09013598548243928
-* Null hypothesis was found to be True
+* The null hypothesis was found to be true.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
 
         ![State Scatter Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level_State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
@@ -110,8 +118,8 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
         
         
 **City:**
-* Inverse correlation. implying larger cities have less police shootings per capita.
-* Low R-squared: 0.09013598548243928
+* Smaller R-squared value, but a more visible grouping of cities, visually implying larger cities have fewer police shootings per capita.
+* Low R-squared: 0.0026383280666281714
 * Neither hypothesis could be accepted.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
 
@@ -119,17 +127,18 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 
         ![City Regression](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level%20Regression_City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
 
-        ![City Trends - Subplots 1](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%201.png?raw=true)
-
-        ![City Trends - Subplots 2](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%202.png?raw=true)
+        ![City Trends - Subplots 1](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%202.png?raw=true)
+        
+        ![City Trends - Subplots 2](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%201.png?raw=true)
+        
 
 * Questions Answered:
 1. Accounting for gender, race, and age, which demographic has had the most victims due to fatal police shootings?
     * The demographic with the most victims due to fatal police shootings are white males between the ages of 31-35.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
 
-2. Will Florida (State) be one of the top 5 States with the most recorded fatal police shootings? 
-    * Florida is among the top 5 States (#3) with the most fatal police shootings.
+2. Will Florida (State) be one of the top 5 states with the most recorded fatal police shootings? 
+    * Florida is among the top 5 states (#3) with the most fatal police shootings.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
     
 3. Which City has the most recorded fatal police shootings? 
@@ -139,7 +148,7 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
         Houston
         Las Vegas
         San Antonio
-     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
             
 
 4. Which State has the most recorded fatal police shootings?
@@ -149,7 +158,7 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
         Florida
         Arizona
         Colorado 
-     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
      
 [Visual Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb "Visual for Questions three and four")
                 
@@ -162,7 +171,7 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
        ![Shooting Analysis by Year ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Shootings%20per%20Year.png?raw=true) 
     
 6. Is there a particular time of the year during which police shootings occur more frequently?
-    * Most police shootings take place in the beginning of the year.
+    * Most police shootings take place at the beginning of the year.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
         
         ![Shooting Analysis by Month ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Shootings%20by%20Month.png?raw=true) 
@@ -192,16 +201,21 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 
 
 
-## Opportunities ##
-There are many opportunities for further exploration of this dataset in the below areas.
+## Commentary and Opportunities ##
+
+It is worth further investigating these populations with the removal of outliers to confirm the visual trend due to the extremely low r-squared values obtained. This project could also become narrower in scope to focus on one state or a sample of states/cities for further insights.
+
+** In regards to the results, though white males are a majority of the victims, according to the [Census Quickfacts](https://www.census.gov/quickfacts/fact/table/US/PST045219) 2019 estimates - the white population accounts for 76.3 percent of the U.S. population. Therefore the number of black victims is not proportional to the black population (listed as 13.4 percent of the U.S. population). This data analysis is still not complete without the factoring of the population makeup within each state/city area or the identification of per capita deaths by race population, which is integral to the topic of police violence. **
+
+There are also many additional opportunities for further exploration of this dataset in the below areas (though data may not be currently captured and released to the public on all of the below).
 
 * Additional Data Comparisons:
-    * Race Specific Population Data
-    * Income Inequality
-    * Police Funding in relation to fatal police shootings
-    * Instances of police brutality, and non lethal shootings
-    * Officer Data - shooting instances, length of service 
+    * Income inequality
+    * Police funding vs fatal police shootings
+    * Instances of police brutality, and non-lethal shootings
+    * Officer data - shooting instances, length of service 
     * Officer staff count in city/state location
+    * Political affiliation within each state/city in comparison to shootings.
 * Visualizations:
     * Maps
 * Relationships between other factors in the shootings data set and shooting fatalities:
