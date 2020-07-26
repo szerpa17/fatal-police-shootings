@@ -33,19 +33,26 @@ Our interest in this topic is due to the social movement taking place, Black Liv
 * **Learning the Language of our Data**
     * Each Census file had over 300 columns and 600 rows of information
     * Time was dedicated to studying how information was presented by the Census to accurately transform it into insights.
+        ![c2015 Data Frame Visual](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Data%20Frames%20and%20Code%20Snippets/c_2015%20Data%20Frame%20Snippet.png?raw=true)
+
 * **Addressing NaN values**
     * The shooting's data frame had multiple columns with NaN Values.
     * As our goal was to preserve the ID column to ensure an accurate count, we refrained from dropping NaN values and instead replaced them with the word 'Unknown'.
 * **Filtering of Data**
     * Extracted shooting data that was dated after 06/30/2020.
 * **Readability**
-    * The gender and race columns variables were renamed for readability.  
+    * The gender and race columns variables in the shooting's data frame were renamed for readability.  
 * **The handling and standardization of multiple files prior to merging**
     * Census Data files had additional terminology associated with city names, which had to be removed with Regex to facilitate a future merge with the shootings data frame.
+        ![Regex Code](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Data%20Frames%20and%20Code%20Snippets/Regex.png?raw=true)
+        
     * Trailing spaces were removed.
     * All Census files were merged into one data frame.
     * Population averages over our chosen four year period were calculated.
+        ![Merged Census Data Frame with Average Population Calculation](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Data%20Frames%20and%20Code%20Snippets/Merged%20Census%20Data%20Frame.png?raw=true)
     * The shooting data frame was updated to standardize the state column (to facilitate the merging with the census data frames on city and state).
+        
+        
 
 ### Insights ###
 
@@ -58,7 +65,7 @@ Our interest in this topic is due to the social movement taking place, Black Liv
 * Census 'Place' terminology
     * A resource for all 'place' designations was identified within the analysis stage of the project.
     * Therefore, cities may have been dropped due to not being matched with the appropriate Census equivalent in the Regex step of the data cleaning. 
-    * Resource [link](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf)
+    * [Resource link](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf)
 * **File Inconsistencies**
     * Census Data files were not consistent in their use of column ID's and column description formats in all files
 * Size of Data
@@ -69,7 +76,8 @@ Our interest in this topic is due to the social movement taking place, Black Liv
     * State
         * Population by State Boxplot (Zoomed, not including all outliers)
             
-            ![State Population Box Plot- Individual States](https://github.com/szerpa17/fatal-police-shootings/blob/szerpa17_2/images/State%20Box%20Plot%20Exploration.png?raw=true)
+            ![State Population Box Plot- Individual States](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/State%20Box%20Plot%20Exploration.png?raw=true)
+        
         * Combined State Average Boxplot
             
             ![Average State Population Single Box Plot - Combined States](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined%20Average%20State%20Population%20Exploration.png?raw=true)
@@ -93,13 +101,15 @@ Our interest in this topic is due to the social movement taking place, Black Liv
     * The mass size of our data also contributed to scope creep as we did not pull samples from our data for analysis.
 * Identifying the opportunity for additional data frames to be made as a foundation for data analysis in the exploration phase (such as a Census data frame that pulls city shooting data for state per capita calculations).
 * The process of backtracking to validate the results of plotted charts. 
-* Application of complicated visualizations.
+* Plot and visualization formatting difficulties.
+    * Though white males within the 31-35 age group were found to be the largest race/age victim group, visualizations did not always match this.
+    * Further development could be made to refine the plots.
+    ![Male Fatal Shooting Deaths by Race and Age Group](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined_Demographics_Male.png?raw=true) ![]
 * Time - which limited analysis and visual details on charts. 
 
 
 ## Data Analysis and Findings ##
 
-## Findings ##
 **Hypothesis results**
 
 A note on R-squared values - data based on human behavior can often have a low r-squared as it is difficult to predict and show statistical significance. ([Source](https://statisticsbyjim.com/glossary/regression-analysis/))
@@ -136,6 +146,7 @@ A note on R-squared values - data based on human behavior can often have a low r
 1. Accounting for gender, race, and age, which demographic has had the most victims due to fatal police shootings?
     * The demographic with the most victims due to fatal police shootings are white males between the ages of 31-35.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+        ![Race vs Age Group Bar Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Race_Age_Bar.png?raw=true)
 
 2. Will Florida (State) be one of the top 5 states with the most recorded fatal police shootings? 
     * Florida is among the top 5 states (#3) with the most fatal police shootings.
@@ -143,26 +154,24 @@ A note on R-squared values - data based on human behavior can often have a low r
     
 3. Which City has the most recorded fatal police shootings? 
     * Cities with Highest Count of Fatal Shootings:
-        Los Angeles
-        Phoenix
-        Houston
-        Las Vegas
-        San Antonio
+        - Los Angeles
+        - Phoenix
+        - Houston
+        - Las Vegas
+        - San Antonio
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
             
 
 4. Which State has the most recorded fatal police shootings?
     * States with Highest Count of Fatal Shootings:
-        California
-        Texas
-        Florida
-        Arizona
-        Colorado 
-    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
-     
-[Visual Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb "Visual for Questions three and four")
-                
-   ![Count of Fatal Shootings by State Bar Chart](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/state_bar.png?raw=true)  
+        - California
+        - Texas
+        - Florida
+        - Arizona
+        - Colorado 
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb "Visual for Questions three and four")
+       
+       ![Count of Fatal Shootings by State Bar Chart](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/state_bar.png?raw=true)  
 
 5. Have police shootings increased in the past five years?
     * The overall count of police shootings a year has remained consistent.
@@ -171,7 +180,8 @@ A note on R-squared values - data based on human behavior can often have a low r
        ![Shooting Analysis by Year ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Shootings%20per%20Year.png?raw=true) 
     
 6. Is there a particular time of the year during which police shootings occur more frequently?
-    * Most police shootings take place at the beginning of the year.
+    * Most police shootings take place at the beginning of the year, specifically in February.
+    * Further research can be conducted to specify why this is.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
         
         ![Shooting Analysis by Month ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Shootings%20by%20Month.png?raw=true) 
@@ -197,15 +207,13 @@ A note on R-squared values - data based on human behavior can often have a low r
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb)
     
         ![Fatal Shootings by Race and Gender Bar Chart](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/gender_bar.png?raw=true)
-  
-
 
 
 ## Commentary and Opportunities ##
 
 It is worth further investigating these populations with the removal of outliers to confirm the visual trend due to the extremely low r-squared values obtained. This project could also become narrower in scope to focus on one state or a sample of states/cities for further insights.
 
-** In regards to the results, though white males are a majority of the victims, according to the [Census Quickfacts](https://www.census.gov/quickfacts/fact/table/US/PST045219) 2019 estimates - the white population accounts for 76.3 percent of the U.S. population. Therefore the number of black victims is not proportional to the black population (listed as 13.4 percent of the U.S. population). This data analysis is still not complete without the factoring of the population makeup within each state/city area or the identification of per capita deaths by race population, which is integral to the topic of police violence. **
+*In regards to the demographic results - though white males make up the majority of the victims, according to the [Census Quickfacts](https://www.census.gov/quickfacts/fact/table/US/PST045219) 2019 estimates - the white population accounts for 76.3 percent of the U.S. population. Therefore the number of black victims is not proportional to the black population (listed as 13.4 percent of the U.S. population). This data analysis is still not complete without the factoring of the population makeup within each state/city area or the identification of per capita deaths by race population, which is integral to the topic of police violence.*
 
 There are also many additional opportunities for further exploration of this dataset in the below areas (though data may not be currently captured and released to the public on all of the below).
 
