@@ -68,6 +68,7 @@ Our interest in this topic is due to the social movement taking place, Black Liv
     * [Resource link](https://www.census.gov/content/dam/Census/data/developers/understandingplace.pdf)
 * **File Inconsistencies**
     * Census Data files were not consistent in their use of column ID's and column description formats in all files
+* Identifying cleaning opportunities in the analysis stage.
 * Size of Data
 * Time
 
@@ -104,7 +105,7 @@ Our interest in this topic is due to the social movement taking place, Black Liv
 * Plot and visualization formatting difficulties.
     * Though white males within the 31-35 age group were found to be the largest race/age victim group, visualizations did not always match this.
     * Further development could be made to refine the plots.
-    ![Male Fatal Shooting Deaths by Race and Age Group](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined_Demographics_Male.png?raw=true) ![]
+    ![Race, Gender, and Age Table](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Data%20Frames%20and%20Code%20Snippets/Race_Age_Gender_Table.png?raw=true)![Male Fatal Shooting Deaths by Race and Age Group](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined_Demographics_Male.png?raw=true)
 * Time - which limited analysis and visual details on charts. 
 
 
@@ -120,12 +121,23 @@ A note on R-squared values - data based on human behavior can often have a low r
 * The null hypothesis was found to be true.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
 
+    <details>
+    <summary>Scatterplot and Regression Line </summary>
+    <br>
+    
         ![State Scatter Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level_State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
 
         ![State Regression](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level%20Regression_State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
 
+     </details>
+     
+    <details>
+    <summary>Zoomed Views (by Population Size)</summary>
+    <br>
+    
         ![State Trends - Subplots](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
-        
+     
+    </details> 
         
 **City:**
 * Smaller R-squared value, but a more visible grouping of cities, visually implying larger cities have fewer police shootings per capita.
@@ -133,24 +145,35 @@ A note on R-squared values - data based on human behavior can often have a low r
 * Neither hypothesis could be accepted.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
 
+    <details>
+    <summary>Scatterplot and Regression Line </summary>
+    <br>
+        
         ![City Scatter Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level_City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
-
+    
         ![City Regression](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level%20Regression_City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
 
+     </details>
+     
+    <details>
+    <summary>Zoomed Views (by Population Size)</summary>
+    <br>
+        
         ![City Trends - Subplots 1](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%202.png?raw=true)
         
         ![City Trends - Subplots 2](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%201.png?raw=true)
-        
+      </details>  
 
 * Questions Answered:
 1. Accounting for gender, race, and age, which demographic has had the most victims due to fatal police shootings?
     * The demographic with the most victims due to fatal police shootings are white males between the ages of 31-35.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+        
         ![Race vs Age Group Bar Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Race_Age_Bar.png?raw=true)
 
 2. Will Florida (State) be one of the top 5 states with the most recorded fatal police shootings? 
     * Florida is among the top 5 states (#3) with the most fatal police shootings.
-    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+    * Note: See chart in # 4.
     
 3. Which City has the most recorded fatal police shootings? 
     * Cities with Highest Count of Fatal Shootings:
@@ -169,7 +192,8 @@ A note on R-squared values - data based on human behavior can often have a low r
         - Florida
         - Arizona
         - Colorado 
-    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb "Visual for Questions three and four")
+    * [Analysis Location 1](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb)
+    * [Analysis Location 2](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
        
        ![Count of Fatal Shootings by State Bar Chart](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/state_bar.png?raw=true)  
 
@@ -191,7 +215,22 @@ A note on R-squared values - data based on human behavior can often have a low r
 * Victim Age Distribution
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
     
-        ![Count of Fatal Shootings by Age Group Histogram](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Age%20Distribution%20Histogram.png?raw=true)  
+        ![Count of Fatal Shootings by Age Group Histogram](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Age%20Distribution%20Histogram.png?raw=true) 
+        
+* Victim Gender
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+    
+        ![Victim Gender Bar Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Gender_Race_Bar.png?raw=true)
+
+* Gender and Age Group
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+    
+        ![Victim Gender vs Age Group Bar Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Gender_Age_Bar.png?raw=true)
+
+* Female Fatal Shooting Deaths by Race and Age Group
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+    
+        ![Female Data - Race and Age Group Bar Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined_Demographics_Female.png?raw=true)
 
 * Fatal Shootings by Race
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb)
@@ -232,4 +271,4 @@ There are also many additional opportunities for further exploration of this dat
     * Fleeing designation and shootings
     * Body-cams and shootings
     * Weapons
-    * Mental Illness and Risk
+    * Mental illness
