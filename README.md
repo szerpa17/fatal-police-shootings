@@ -215,6 +215,8 @@ It is worth further investigating these populations with the removal of outliers
 
 *In regards to the demographic results - though white males make up the majority of the victims, according to the [Census Quickfacts](https://www.census.gov/quickfacts/fact/table/US/PST045219) 2019 estimates - the white population accounts for 76.3 percent of the U.S. population. Therefore the number of black victims is not proportional to the black population (listed as 13.4 percent of the U.S. population). This data analysis is still not complete without the factoring of the population makeup within each state/city area or the identification of per capita deaths by race population, which is integral to the topic of police violence.*
 
+![Census Quickfacts Snippet](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Data%20Frames%20and%20Code%20Snippets/Census%20Quickfacts%20Table.PNG?raw=true)
+
 There are also many additional opportunities for further exploration of this dataset in the below areas (though data may not be currently captured and released to the public on all of the below).
 
 * Additional Data Comparisons:
