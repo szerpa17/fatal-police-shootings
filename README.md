@@ -31,8 +31,6 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 * **Learning the Language of our Data**
     * Each Census file had over 300 columns and 600 rows of information
     * Time was dedicated to studying how information was presented by the Census in order to accurately transform it into insights.
-        
-        ![c_2015 Data Frame Snippet]()
 * **Addressing NaN values**
     * The shootings data frame had multiple columns with Nan Values.
     * As our goal was to preserve the ID column to ensure an accurate count, we refrained from dropping NaN values and instead replaced them with the word 'Unknown'.
@@ -42,8 +40,6 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
     * The gender and race columns variables were renamed for readability.  
 * **The handling and standardization of multiple files prior to merging**
     * Census Data files had additional terminology associated with city names, which had to be removed with Regex in order to facilitate a future merge with the shootings data frame.
-        
-        ![Regex Code]()
     * Trailing spaces were removed.
     * All Census files were merged into one data frame.
     * Population averages over our chosen four year period were calculated.
@@ -92,7 +88,7 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
     * The mass size of our data also contributed to scope creep as we did not pull samples from our data for analysis.
 * Backtracking to validate the results of plotted charts. 
 * Application of complicated visualizations.
-* Time, which limited analysis and visual details on charts. 
+* Time - which limited analysis and visual details on charts. 
 
 
 ## Data Analysis and Findings ##
@@ -104,13 +100,28 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 * No visible correlation
 * Low R-squared: 0.09013598548243928
 * Null hypothesis was found to be True
-* [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
 
+        ![State Scatter Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level_State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
+
+        ![State Regression](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level%20Regression_State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
+
+        ![State Trends - Subplots](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
+        
+        
 **City:**
 * Inverse correlation. implying larger cities have less police shootings per capita.
 * Low R-squared: 0.09013598548243928
 * Neither hypothesis could be accepted.
-* [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
+
+        ![City Scatter Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level_City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
+
+        ![City Regression](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level%20Regression_City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
+
+        ![City Trends - Subplots 1](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%201.png?raw=true)
+
+        ![City Trends - Subplots 2](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%202.png?raw=true)
 
 * Questions Answered:
 1. Accounting for gender, race, and age, which demographic has had the most victims due to fatal police shootings?
@@ -128,7 +139,8 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
         Houston
         Las Vegas
         San Antonio
-        * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+            
 
 4. Which State has the most recorded fatal police shootings?
     * States with Highest Count of Fatal Shootings:
@@ -138,41 +150,45 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
         Arizona
         Colorado 
      * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+     
+[Visual Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb "Visual for Questions three and four")
+                
+   ![Count of Fatal Shootings by State Bar Chart](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/state_bar.png?raw=true)  
 
 5. Have police shootings increased in the past five years?
     * The overall count of police shootings a year has remained consistent.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_BH.ipynb)
+       
+       ![Shooting Analysis by Year ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Shootings%20per%20Year.png?raw=true) 
     
 6. Is there a particular time of the year during which police shootings occur more frequently?
     * Most police shootings take place in the beginning of the year.
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
+        
+        ![Shooting Analysis by Month ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Shootings%20by%20Month.png?raw=true) 
 
-** Additional Analysis Conducted ** 
+**Additional Analysis Conducted** 
 
 * Victim Age Distribution
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
     
-![Count of Fatal Shootings by Age Group Histogram](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Age%20Distribution%20Histogram.png?raw=true)  
+        ![Count of Fatal Shootings by Age Group Histogram](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Age%20Distribution%20Histogram.png?raw=true)  
 
 * Fatal Shootings by Race
-* [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb)
+    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb)
 
-![Race Pie Chart ]() 
+        ![Race Pie Chart ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/race_pie.png?raw=true) 
 
 * Fatal Shootings by Race and Manner of Death
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb)
     
-![Race and Manner of Death Pie Chart ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/race_manner_of_death_doubledonut.png?raw=true)      
+        ![Race and Manner of Death Pie Chart ](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/race_manner_of_death_doubledonut.png?raw=true)      
 
 * Fatal Shootings by Race and Gender
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb)
     
-![Fatal Shootings by Race and Gender Bar Chart](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/gender_bar.png?raw=true)
-
- 
-* Count of Fatal Shootings by State
-    * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis.ipynb)
-    
-![Count of Fatal Shootings by State Bar Chart](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/state_bar.png?raw=true)    
+        ![Fatal Shootings by Race and Gender Bar Chart](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/gender_bar.png?raw=true)
+  
 
 
 
@@ -193,7 +209,3 @@ There are many opportunities for further exploration of this dataset in the belo
     * Body-cams and shootings
     * Weapons
     * Mental Illness and Risk
-
-
-
-![Alt](/wp.png "Title")
