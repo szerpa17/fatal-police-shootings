@@ -121,23 +121,17 @@ A note on R-squared values - data based on human behavior can often have a low r
 * The null hypothesis was found to be true.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
 
-    <details>
-    <summary>Scatterplot and Regression Line </summary>
-    <br>
+    
+    * Scatterplot and Regression Line 
     
         ![State Scatter Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level_State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
 
         ![State Regression](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level%20Regression_State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
 
-     </details>
-     
-    <details>
-    <summary>Zoomed Views (by Population Size)</summary>
-    <br>
+    * Zoomed Scatter Plot (by Population Size)
     
         ![State Trends - Subplots](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/State%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
      
-    </details> 
         
 **City:**
 * Smaller R-squared value, but a more visible grouping of cities, visually implying larger cities have fewer police shootings per capita.
@@ -145,24 +139,17 @@ A note on R-squared values - data based on human behavior can often have a low r
 * Neither hypothesis could be accepted.
     * [Analysis Location](https://github.com/szerpa17/fatal-police-shootings/blob/master/Analysis_SZ.ipynb)
 
-    <details>
-    <summary>Scatterplot and Regression Line </summary>
-    <br>
+    * Scatterplot and Regression Line 
         
         ![City Scatter Plot](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level_City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
     
         ![City Regression](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/High%20Level%20Regression_City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities.png?raw=true)
 
-     </details>
-     
-    <details>
-    <summary>Zoomed Views (by Population Size)</summary>
-    <br>
+    * Zoomed Scatter Plot (by Population Size)
         
         ![City Trends - Subplots 1](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%202.png?raw=true)
         
         ![City Trends - Subplots 2](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/City%20Population%20Vs.%20Per%20Capita%20Shooting%20Fatalities%201.png?raw=true)
-      </details>  
 
 * Questions Answered:
 1. Accounting for gender, race, and age, which demographic has had the most victims due to fatal police shootings?
