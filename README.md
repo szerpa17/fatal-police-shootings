@@ -66,12 +66,12 @@ The goal of our project is to examine fatal police shootings throughout the U.S.
 * State and city population information was visualized
     * State
         * Population by State Boxplot
-            ![State Population Box Plot- Individual States]()
+            ![State Population Box Plot- Individual States](https://github.com/szerpa17/fatal-police-shootings/blob/szerpa17_2/images/State%20Box%20Plot%20Exploration.png?raw=true)
         * Combined State Average Boxplot
-            ![Average State Population Single Box Plot - Combined States]()
+            ![Average State Population Single Box Plot - Combined States](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined%20Average%20State%20Population%20Exploration.png?raw=true)
     * City
         * Combined City Boxplot
-            [Average City Population Single Box Plot - Combined Cities]()
+            [Average City Population Single Box Plot - Combined Cities](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Combined%20Average%20City%20Population%20Exploration.png?raw=true)
         
 ### Insights ###
 * Census Data
