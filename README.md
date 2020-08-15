@@ -239,11 +239,15 @@ A note on R-squared values - data based on human behavior can often have a low r
 
 It is worth further investigating these populations with the removal of outliers to confirm the visual trend due to the extremely low r-squared values obtained. This project could also become narrower in scope to focus on one state or a sample of states/cities for further insights.
 
-*In regards to the demographic results - though white males make up the majority of the victims, according to the [Census Quickfacts](https://www.census.gov/quickfacts/fact/table/US/PST045219) 2019 estimates - the white population accounts for 76.3 percent of the U.S. population. Therefore the number of black victims is not proportional to the black population (listed as 13.4 percent of the U.S. population). This data analysis is still not complete without the factoring of the population makeup within each state/city area or the identification of per capita deaths by race population, which is integral to the topic of police violence.*
+When comparing the racial demographic makeup of the U.S. population (2019 estimates obtained from the [Census Quickfacts site](https://www.census.gov/quickfacts/fact/table/US/PST045219)) and the police shooting fatality dataset, white-alone individuals account for 60.1% of the U.S. population, but only 46% of fatalities. That is a **24% decrease** in demographic representation. Hispanic/Latino individuals account for 18.5% of the U.S. population, and 16.6% of fatalities - which is a **10% decrease** in demographic representation. Meanwhile, the black population accounts for 13.4% of the U.S. population and 23.9% of fatalities - a **78% increase** in demographic representation within the police fatality data set.
+
+Based on this information, the resulting deaths are not proportional to the overall population sizes - and the black community in particular, is over-represented within the fatal police shooting dataset. This could be due to a variety of issues - policing tactics, lack of diversity in the police force, training, the actions or inactions to prior disciplinary issues, etc.
+
+This data analysis is still not complete without the factoring of the population makeup within each state/city area or the identification of per capita deaths by race population, which is integral to the topic of police violence. 
 
 ![Census Quickfacts Snippet](https://github.com/szerpa17/fatal-police-shootings/blob/master/images/Data%20Frames%20and%20Code%20Snippets/Census%20Quickfacts%20Table.PNG?raw=true)
 
-There are also many additional opportunities for further exploration of this dataset in the below areas (though data may not be currently captured and released to the public on all of the below).
+There are also many additional opportunities for further exploration of this dataset in the below areas. Data may not be currently captured or released to the public on all of the below, which represents an additional challenge in the analysis of this issue.
 
 * Additional Data Comparisons:
     * Income inequality
@@ -252,6 +256,7 @@ There are also many additional opportunities for further exploration of this dat
     * Officer data - shooting instances, length of service 
     * Officer staff count in city/state location
     * Political affiliation within each state/city in comparison to shootings.
+    * Police shooting fatality comparison between multiple countries.
 * Visualizations:
     * Maps
 * Relationships between other factors in the shootings data set and shooting fatalities:
